@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+	<head>
+    {{ partial "head.html" . }}
+    </head>
+<body>
+	  <header class="header">
+			{{ partial "brand.html" . }}
+		</header>
+    <nav class="main-nav">
+        {{ partial "nav.html" . }}
+    </nav>
+    <div id="site-wrapper">
+        <main>
+            {{ block "main" . }} {{ end }}
+        </main>
+        <aside class="desktop-only">
+            {{ block "widgets" . }}{{ end }}
+            {{ partial "footer.html" . }}
+        </aside>
+        {{ partial "footer.html" . }}
+    </div>   
+    
+    {{ partial "js.html" . }}
+</body>
+</html>

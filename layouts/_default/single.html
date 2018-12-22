@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <article class="single">
+    <h1>{{ .Title }}</h1>
+    <section class="extras">
+      <small class="time"> {{ .Date.Format "January 2, 2006" }} </small>
+      <br>
+      {{ with .Params.tags }}
+      {{ if ge (len .) 1 }}
+          {{ range . }}
+              <a href="{{ printf "tags/%s" (. | urlize) | absURL }}">{{ . }}</a>
+          {{ end }}
+      {{ end }}
+      {{ end}}
+    </section>
+    <section class="description">
+      {{ .Description }}
+    </section>
+    <section id="content" class="body">
+        {{ .Content }}
+    </section>  
+  </article>
+  {{ partial "share.html" . }} 
+  {{ partial "author.html" . }}
+  {{ partial "discuss.html" . }}
+{{ end }}
+
+{{ define "widgets" }}
+	{{ partial "widgets.html" . }}
+{{ end }}

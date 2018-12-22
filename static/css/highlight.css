@@ -1,0 +1,106 @@
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  /*padding: 0.5em;*/
+  background: none;
+  color: #24292e;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-shebang,
+.hljs-comment {
+  color: #777279;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #d73a49;
+}
+
+.hljs-sub .hljs-keyword,
+.method,
+.hljs-list .hljs-title,
+.nginx .hljs-title {
+  color: #ffffb6;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.coffeescript .hljs-attribute {
+  color: #005cc5;
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-regexp {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-decorator,
+.tex .hljs-special,
+.hljs-type,
+.hljs-constant,
+.smalltalk .hljs-class,
+.hljs-doctag,
+.nginx .hljs-built_in {
+  color: #005cc5;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number,
+.hljs-variable,
+.vbscript,
+.hljs-literal,
+.hljs-name {
+  color: #005cc5;
+}
+
+.css .hljs-tag {
+  color: #005cc5;
+}
+
+.css .hljs-rule .hljs-property,
+.css .hljs-id {
+  color: #ffffb6;
+}
+
+.css .hljs-class {
+  color: #24292e;
+}
+
+.hljs-hexcolor {
+  color: #c6c5fe;
+}
+
+.hljs-number {
+  color:#005cc5;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.9;
+}

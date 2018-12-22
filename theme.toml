@@ -1,0 +1,12 @@
+name = "onePress"
+license = "MIT"
+licenselink = "https://github.com/ijsucceed/hugo-onepress-theme/blob/master/License.md"
+description = "A minimalistic and responsive theme for content writers."
+homepage = "https://github.com/ijsucceed/hugo-onepress-theme"
+tags = ["blog", "disqus", "google analytics", "rss", "syntax highlighting"]
+features = ["disqus", "google analytics", "rss", "topics", "syntax highlighting", "blog", "pagination", "sharing options", "External subscription support"]
+min_version = 0.20
+
+[author]
+  name = "Jeremiah Succeed"
+  homepage = "https://ijsucceed.com/"
