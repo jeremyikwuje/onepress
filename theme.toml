@@ -1,12 +1,21 @@
-name = "onePress"
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Onepress"
 license = "MIT"
-licenselink = "https://github.com/ijsucceed/hugo-onepress-theme/blob/master/License.md"
-description = "A minimalistic and responsive theme for content writers."
-homepage = "https://github.com/ijsucceed/hugo-onepress-theme"
-tags = ["blog", "disqus", "google analytics", "rss", "syntax highlighting"]
-features = ["disqus", "google analytics", "rss", "topics", "syntax highlighting", "blog", "pagination", "sharing options", "External subscription support"]
-min_version = 0.20
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = ""
+homepage = "http://example.com/"
+tags = []
+features = []
+min_version = "0.41"
 
 [author]
-  name = "Jeremiah Succeed"
-  homepage = "https://ijsucceed.com/"
+  name = ""
+  homepage = ""
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

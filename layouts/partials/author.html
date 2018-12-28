@@ -1,4 +1,5 @@
-<div class="author-card mobile-only" itemscope itemprop="author" itemtype="https://schema.org/Person">
+{{ if .Site.Params.authorCard }}
+<div class="author-card" itemscope itemprop="author" itemtype="https://schema.org/Person">
     <div class="author-dp">
         <img itemprop='image' src="/images/me.jpg" alt=".Site.Param.name" />
     </div>
@@ -11,3 +12,4 @@
         </div>
     </div>
 </div>
+{{ end}}

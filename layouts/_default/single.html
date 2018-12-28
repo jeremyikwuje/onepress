@@ -2,26 +2,34 @@
   <article class="single">
     <h1>{{ .Title }}</h1>
     <section class="extras">
-      <small class="time"> {{ .Date.Format "January 2, 2006" }} </small>
-      <br>
-      {{ with .Params.tags }}
-      {{ if ge (len .) 1 }}
-          {{ range . }}
-              <a href="{{ printf "tags/%s" (. | urlize) | absURL }}">{{ . }}</a>
-          {{ end }}
-      {{ end }}
-      {{ end}}
+        <span class="tags">
+          <small class="time">{{ .Date.Format "January 2, 2006" }}</small>
+          {{ if .Params.tags }}
+             , posted under 
+             {{range .Params.tags}}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+             {{end}}
+          {{end}}
+        </span>
     </section>
     <section class="description">
       {{ .Description }}
     </section>
+    {{ if .Params.featuredImage }}
+    <section class="featuredImage">
+        <img src="{{ .Params.featuredImage }}" alt="{{ .Title }}">
+    </section>
+    {{ end }}
     <section id="content" class="body">
         {{ .Content }}
-    </section>  
+    </section> 
+    
+    <!-- You can add a call to action here -->
+     
   </article>
   {{ partial "share.html" . }} 
   {{ partial "author.html" . }}
-  {{ partial "discuss.html" . }}
+  {{ partial "disqus.html" . }}
 {{ end }}
 
 {{ define "widgets" }}

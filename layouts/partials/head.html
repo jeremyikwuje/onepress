@@ -30,7 +30,7 @@
 <meta property="og:url" content="{{ .Site.BaseURL }}">
 
 {{ if .Site.Params.opengraphImage}}
-  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.opengraphImage}}">
+  <meta property="og:image" content="{{ if .Params.featuredImage }}{{ .Site.BaseURL }}{{ .Params.featuredImage }}{{ else }}{{ .Site.BaseURL }}{{ .Site.Params.opengraphImage}}{{ end }}">
 {{ end }}
 
 {{ if .Description }}

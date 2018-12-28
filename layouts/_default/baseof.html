@@ -10,17 +10,29 @@
     <nav class="main-nav">
         {{ partial "nav.html" . }}
     </nav>
+    
+    <!-- show sidebar if widgets param is set to true -->
+    {{ if .Site.Params.widgets }}
     <div id="site-wrapper">
         <main>
             {{ block "main" . }} {{ end }}
         </main>
-        <aside class="desktop-only">
-            {{ block "widgets" . }}{{ end }}
-            {{ partial "footer.html" . }}
-        </aside>
+            <!-- show widget on larger screen -->
+            <aside class="desktop-only">
+                {{ block "widgets" . }}{{ end }}
+                {{ partial "footer.html" . }}
+            </aside>
         {{ partial "footer.html" . }}
-    </div>   
-    
+    </div>
+    {{ else }}
+    <!-- no sidebar, content centered to screen -->
+        <div id="site-wrapper-centered">
+            <main class="center">
+                {{ block "main" . }} {{ end }}
+            </main>
+            {{ partial "footer.html" . }}
+        </div>
+    {{ end }}
     {{ partial "js.html" . }}
 </body>
 </html>

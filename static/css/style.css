@@ -10,7 +10,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 html {
 	background: #fff !important;
-	color: #555;
+	color: #3b3b3b;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 20px;
 	font-weight: 400;
@@ -69,6 +69,8 @@ img {
     vertical-align: top;
 }
 
+/* CODE INLINE & BLOCK */
+
 code {
 	background-color: rgba(27,31,35,.05);
 	border-radius: 3px;
@@ -87,6 +89,9 @@ pre {
 }
 pre code {
 	background: none;
+}
+pre a {
+    border-bottom: none;
 }
 
 /* INPUT & BUTTONS */
@@ -114,7 +119,7 @@ button, .button {
     width: auto;
 }
 
-/* Clearfix */
+/* Clearfix and Hidden */
 
 .clearfix:after {
 	content: "";
@@ -123,8 +128,13 @@ button, .button {
 }
 .hidden { display: none; }
 
+/* POSITIONING */
+
+.text-center {
+    text-align: center;
+}
 .center {
-	text-align: center;
+	margin: 0 auto;
 }
 .left {
 	float: left;
@@ -189,6 +199,19 @@ nav ul li a {
 /* CONTENT WRAPPERS */
 /* ------------------------ */
 
+#site-wrapper:before, 
+main article:before,
+aside .widgets:before {
+    display: table;
+	content: " ";
+}
+
+#site-wrapper:after, 
+main article:after,
+aside .widgets:after {
+    
+}
+
 #site-wrapper {
 	max-width: 768px;
 	margin: 0 auto;
@@ -196,9 +219,12 @@ nav ul li a {
     padding: 60px 30px 0px;
 	overflow-wrap: break-word;
 }
-#site-wrapper:before {
-	display: table;
-	content: " ";
+#site-wrapper-centered {
+	max-width: 768px;
+	margin: 0 auto;
+	margin-top: 0px;
+    padding: 60px 0px 0px;
+	overflow-wrap: break-word;
 }
 
 /* ------ MAIN ----- */
@@ -206,6 +232,10 @@ nav ul li a {
 main {
 	width: 100%;
 	font-size: 90%;
+}
+
+main.center {
+    width: 100% !important;
 }
 
 main.article.list h1,
@@ -234,12 +264,14 @@ main article.list a span.image {
 	display: block;
 	background-size: cover;
 	background-position: center;
-	opacity: 0.7;
+	opacity: 0.9;
 	margin-bottom: 1em;
 }
 
 main article.list a h2.title,
-main article.list span.intro {
+main article.list span.intro,
+main article.list .tags,
+main article.list a.read-more {
 	display: block;
 }
 
@@ -248,8 +280,19 @@ main article.single h1 {
 	color: #333;
 	font-size: 150%;
 	line-height: 1.1em;
-	margin-bottom: 1em;
+	margin-bottom: 0.3em;
 	font-weight: 400;
+}
+
+main article.list .tags {
+    margin-bottom: 1em;
+    opacity: 0.5;
+}
+main article.list .tags a,
+main article.single .tags a {
+    color: #000;
+    text-decoration: underline;
+    border-bottom: none;
 }
 
 main article.list span.intro {
@@ -265,10 +308,16 @@ main article.list a.read-more {
 
 main article.single .extras,
 main article.single .description,
-main article.single .content {
+main article.single .content,
+main article.single .featuredImage {
 	margin-bottom: 1em;
 }
 
+main article.single .description {
+    font-style: italic;
+    font-size: 140%;
+    padding: 0 15px;
+}
 
 /* ------ SINGLE PAGE CONTENT FORMAT ----- */
 
@@ -306,7 +355,6 @@ main article.single .content {
 }
 
 .single li {
-	color: #000;
 }
 
 .single li a {
@@ -329,6 +377,10 @@ main article.single .content {
     margin: 0 auto;
 }
 
+.single table {
+    display: table;
+}
+
 /* ------ ASIDE CONTENT ----- */
 
 aside {
@@ -344,11 +396,6 @@ aside .widgets {
 	margin-bottom: 10px;
 }
 
-aside .widgets:before {
-	content: "";
-	display: table;
-}
-
 aside p {
 	margin-bottom: 20px;
 }
@@ -356,30 +403,41 @@ aside p {
 aside .widgets .widget {
 	margin-bottom: 40px;
 }
-
-aside .widgets .promo-subscribe {
-	background: #f5f5f5;
-	padding: 30px;
-}
-
-aside .widgets .promo-subscribe .button {
-	width: 100%;
-	display: block;
-}
-
-aside .widgets .author {
-	background: #f5f5f5;
-	padding: 30px;
-}
-
-aside .widgets .author .author-photo {
-	border: 3px solid #fff;
-}
 aside .widgets .widget .widget-title {
 	font-size: 120%;
 	font-weight: 400;
 	margin-bottom: 20px;
 }
+aside .widgets .promo-subscribe {
+	background: #f5f5f5;
+	padding: 30px;
+}
+aside .widgets .promo-subscribe .button {
+	width: 100%;
+	display: block;
+}
+aside .widgets .topics {
+	padding: 0px;
+}
+aside .widgets .socials ul li,
+aside .widgets .topics ul li {
+    display: inline-block;
+    list-style: none;
+    border: none;
+    margin: 0px 6px 12px;
+}
+aside .widgets .socials ul li a {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    font-size: 100%;
+}
+aside .widgets .topics ul li a {
+    color: #000;
+    text-decoration: underline;
+    text-transform: uppercase;
+}   
+
 
 /* ------------ */
 /* Share Card */
@@ -426,6 +484,7 @@ aside .widgets .widget .widget-title {
 }
 .author-card .author-dp img {
     display: block;
+    border-radius: 50%;
     margin: 0 auto;
     width: 90px;
 }

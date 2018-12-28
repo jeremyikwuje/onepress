@@ -1,9 +1,25 @@
 {{ range where .Paginator.Pages "Section" "ne" "" }}
 <article class="list">
   <a href='{{ .URL }}'><h2 class="title">{{ .LinkTitle }}</h2></a>
-  {{ if .Params.topics }}<strong>Topics:</strong> {{range .Params.topics}}<a href="{{ "/topics/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}
-  <a href='{{ .URL }}'><span class="image" style="background-image: url(https://www.yongfook.com/assets/images/montage/poster.jpg)"></span></a>
+  <span class="tags">
+  {{ .Date.Format "January 2, 2006" }} 
+  {{ if .Params.tags }}
+     , posted under
+     {{range .Params.tags}}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+     {{end}}
+  {{end}}
+  </span>
+  {{ if .Params.featuredImage  }}
+  <a href='{{ .URL }}'><span class="image" style="background-image: url({{.Params.featuredimage }})"></span></a>
+  {{ end }}
   <span class="intro">{{ .Description | markdownify }}</span>
-  <a href='{{ .URL }}' class="read-more">Read Up</a>
+  <a href='{{ .URL }}' class="read-more">
+      {{ if .Site.Params.readMore }} 
+          {{.Site.Params.readMore}}
+      {{ else }}
+          Read Up
+      {{ end }}
+  </a>
 </article>
 {{ end }}

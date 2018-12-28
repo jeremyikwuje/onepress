@@ -1,27 +1,37 @@
 <div class="widgets">
-  <section class="widget promo-subscribe">
-      <h2 class="widget-title">Email Subscription</h2>
-      <p class="promo-text">
-        Improve your PHP skills with actionable tutorials delivered to your email.
-      </p>
-      <a href='https://tinyletter.com/ijsucceed' class='button'>Join For Free</a>
+      
+  <section itemscope itemtype="https://schema.org/Person" class="widget socials">
+    <h2 class="widget-title">Socials</h2>
+    <ul>
+        {{ if .Site.Params.facebook }}
+            <li><a href="{{ .Site.Params.facebook }}"><i class="fa fa-facebook"></i></a></li>
+        {{ end }}
+        {{ if .Site.Params.twitter }}
+        <li><a href="{{ .Site.Params.twitter }}"><i class="fa fa-twitter"></i></a></li>
+        {{end}}
+        {{ if .Site.Params.linkedin }}
+        <li><a href="{{ .Site.Params.linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+        {{end}}
+        {{ if .Site.Params.github }}
+        <li><a href="{{ .Site.Params.github }}"><i class="fa fa-github"></i></a></li>
+        {{end}}
+    </ul>
   </section>
-  <section class="widget author">
-    <h2 class="widget-title">About Succeed</h2>
-    <div class="right">
-      <img class="block author-photo" src="/images/me.jpg" width="60" alt="ijsucceed photo">
-    </div>
-    <div style="">
-      <p>
-      Welcome to my blog!
-      </p>
-      <p>
-        I'm a web developer, templates designer, and Minimalist.
-      </p>
-      <p>
-      You can find me on <a href="https://twitter.com/ijsucceed">twitter</a> and
-      <a href="https://github.com/ijsucceed">GitHub</a>.
-      </p>
-     </div>
+ 
+  <section class="widget widget-one">
+     <h2 class="widget-title">
+        Widget 2
+    </h2>
+    <!-- add content here -->
   </section>
+    
+  <section itemscope itemtype="https://schema.org/Person" class="widget">
+    <h2 class="widget-title">
+        Widget 3
+    </h2>
+    <!-- add content here -->
+  </section>
+    
+ <!-- You can add multiple widgets section below -->
+
 </div>
