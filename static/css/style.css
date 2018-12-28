@@ -1,3 +1,536 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600');
+
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article.list,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article.list,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* ------------ */
+/* REUSABLE */
+/* ------------ */
+
+html {
+	background: #fff !important;
+	color: #3b3b3b;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color: #fff;
+	line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	  color: #333;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+		letter-spacing: 1px;
+		word-spacing: 3px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+h1 {
+	font-size:
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+p {
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+blockquote {
+    margin: 30px;
+		font-style: italic;
+}
+
+i, em {
+	font-style: italic;
+	color: #000;
+}
+
+b, strong {
+	color: #000;
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* CODE INLINE & BLOCK */
+
+code {
+	background-color: rgba(27,31,35,.05);
+	border-radius: 3px;
+	font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+	font-size: 85%;
+	margin: 0;
+	padding: .2em .4em;
+}
+pre {
+	background-color: #f6f8fa;
+	border-radius: 3px;
+	font-size: 85%;
+	line-height: 1.45;
+	overflow: auto;
+	padding: 16px;
+}
+pre code {
+	background: none;
+}
+pre a {
+    border-bottom: none;
+}
+
+/* INPUT & BUTTONS */
+
+input, select, textarea {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px;
+    width: 100%;
+}
+button, .button {
+    background-color: #333;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    width: auto;
+}
+
+/* Clearfix and Hidden */
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden { display: none; }
+
+/* POSITIONING */
+
+.text-center {
+    text-align: center;
+}
+.center {
+	margin: 0 auto;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.block {
+	display: block;
+}
+
+
+/** Screen reader */
+.screen-reader-only {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+/* ------------ */
+/* HEADERS */
+/* ------------ */
+
+header {
+	text-align: center;
+	padding-top: 17px;
+	padding-bottom: 10px;
+}
+header img {
+	width: 48px;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+}
+
+nav {
+	font-size: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.67px;
+	line-height: 22px;
+	padding-bottom: 15px;
+}
+nav ul li {
+	display: inline;
+	padding: 0 7px;
+}
+nav li.active a {
+	border-bottom: 1px solid #5b5b5b;
+}
+nav ul li a {
+	color: #5b5b5b;
+	text-decoration: none;
+	border-bottom: none;
+	padding-bottom: 2px;
+}
+
+/* ------------------------ */
+/* CONTENT */
+/* ------------------------ */
+
+/* --- WRAPPERS --- */
+
+#site-wrapper:before, 
+main article:before,
+aside .widgets:before {
+    display: table;
+	content: " ";
+}
+
+#site-wrapper:after, 
+main article:after,
+aside .widgets:after {
+    
+}
+
+#site-wrapper {
+	max-width: 768px;
+	margin: 0 auto;
+	margin-top: 0px;
+    padding: 60px 30px 0px;
+	overflow-wrap: break-word;
+}
+#site-wrapper-centered {
+	max-width: 768px;
+	margin: 0 auto;
+	margin-top: 0px;
+    padding: 60px 30px 0px;
+	overflow-wrap: break-word;
+}
+
+/* ------ MAIN ----- */
+
+main {
+	width: 100%;
+	font-size: 90%;
+}
+
+main.center {
+    width: 100% !important;
+}
+
+main.article.list h1,
+h3,
+h4,
+h5,
+p,
+.body ul,
+ol,
+pre {
+    margin-bottom: 20px;
+}
+
+main article.list,
+main article.single {
+	margin-bottom: 40px;
+}
+
+main article.list a {
+	text-decoration: none;
+	color: #000;
+}
+
+main article.list a span.image {
+	height: 380px;
+	display: block;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.9;
+	margin-bottom: 1em;
+}
+
+main article.list a h2.title,
+main article.list span.intro,
+main article.list .tags,
+main article.list a.read-more {
+	display: block;
+}
+
+main article.list a h2.title,
+main article.single h1 {
+	color: #333;
+	font-size: 150%;
+	line-height: 1.1em;
+	margin-bottom: 0.3em;
+	font-weight: 400;
+}
+
+main article.list .tags {
+    margin-bottom: 1em;
+    opacity: 0.5;
+}
+main article.list .tags a,
+main article.single .tags a {
+    color: #000;
+    text-decoration: underline;
+    border-bottom: none;
+}
+
+main article.list span.intro {
+	font-size: 100%;
+	font-weight: 400;
+	margin-bottom: 1em;
+}
+
+main article.list a.read-more {
+	color: #5c5c5c;
+	text-decoration: underline;
+}
+
+main article.single .extras,
+main article.single .description,
+main article.single .content,
+main article.single .featuredImage {
+	margin-bottom: 1em;
+}
+
+main article.single .description {
+    font-style: italic;
+    font-size: 140%;
+    padding: 0 15px;
+}
+
+/* ------ SINGLE PAGE CONTENT FORMAT ----- */
+
+.single h1,
+.single h2,
+.single h3,
+.single h4,
+.single h5,
+.single h6 {
+	font-weight: 600;
+}
+
+.single h2 {
+	font-size: 130%;
+}
+
+.single h3 {
+	font-size: 110%;
+}
+
+.single h4 {
+	font-size: 90%;
+}
+
+.single h5 {
+	font-size: 80%;
+}
+
+.single h6 {
+	font-size: 70%;
+}
+
+.single a {
+	border-bottom: 2px solid #000;
+}
+
+.single li {
+}
+
+.single li a {
+	color: #000;
+	border-bottom: none;
+}
+
+.single b,
+.single strong, {
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.single ul li,
+.single ol li  {
+	margin: 0 40px;
+	font-weight: 400;
+}
+.single img {
+    display: block;
+    margin: 0 auto;
+}
+
+.single table {
+    display: table;
+}
+
+/* ------ ASIDE CONTENT ----- */
+
+aside {
+	width: 25%;
+	font-size: 16px;
+}
+
+aside a {
+	color: #000;
+}
+
+aside .widgets {
+	margin-bottom: 10px;
+}
+
+aside p {
+	margin-bottom: 20px;
+}
+
+aside .widgets .widget {
+	margin-bottom: 40px;
+}
+aside .widgets .widget .widget-title {
+	font-size: 120%;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+aside .widgets .promo-subscribe {
+	background: #f5f5f5;
+	padding: 30px;
+}
+aside .widgets .promo-subscribe .button {
+	width: 100%;
+	display: block;
+}
+aside .widgets .topics {
+	padding: 0px;
+}
+aside .widgets .socials ul li,
+aside .widgets .topics ul li {
+    display: inline-block;
+    list-style: none;
+    border: none;
+    margin: 0px 6px 12px;
+}
+aside .widgets .socials ul li a {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    font-size: 100%;
+}
+aside .widgets .topics ul li a {
+    color: #000;
+    text-decoration: underline;
+    text-transform: uppercase;
+}   
+
+
+/* ------------ */
+/* Share Card */
+/* ------------ */
+.share-card {
+    margin-bottom: 40px;
+}
+.share-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-bottom: none;
+    word-spacing: 10px;
+}
+.share-card a:first-child {
+    margin-right: 20px;
+}
+.share-card a i {
+    color: #fff;
+}
+.share-card a.twitter {
+    background-color: #38A1F3;
+    color: #fff;
+}
+.share-card a.facebook {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+/* ----------- */
+/* Author card */
+/* ----------- */
+.author-card {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 40px;
+    
+}
+.author-card .author-dp {
+    text-align: center;
+    margin-right: 20px;
+}
+.author-card .author-dp img {
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 90px;
+}
+.author-card .author-bio {
+}
+.author-card .author-bio .author-title {
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+/* ------------ */
+/* FOOTER */
+/* ------------ */
+footer {
+	font-size: 12px;
+}
+
+
+/* ------ ------ */
+/* Responsive behaviors */
+/* ------ ------ */
+
+@media only screen and ( max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  } 
+}
+@media only screen and ( min-width: 768px ) {
+    .mobile-only {
+        display: none !important;
+    }
+    
+    #site-wrapper {
+        max-width: 1140px;
+        display: flex;
+        justify-content: space-between;
+    } 
+    
+    main {
+        width: 65%;
+    }
+}
+=======
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600');
 
 /* Reset */
@@ -527,3 +1060,4 @@ footer {
         width: 65%;
     }
 }
+>>>>>>> bc3b59fd459be92483fe0d7e20a8169a3ec1543d
