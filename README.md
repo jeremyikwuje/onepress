@@ -178,4 +178,4 @@ If you'd like to help with the continous improvement of this theme, I encourage 
 
 ## License
 
-This theme is released under the MIT license. For more information read the [license](https://github.com/ijsucceed/onepress/blob/master/LICENSE).
+This theme is released under the Apache 2.0 license. For more information read the [license](https://github.com/ijsucceed/onepress/blob/master/LICENSE).
