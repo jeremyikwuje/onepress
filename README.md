@@ -20,7 +20,7 @@ Onepress is a simple, clean, and responsive "Hugo - Static Site Generator" theme
 
 ## Screenshot 
 
-![]()
+![Onepress screenshot](https://raw.githubusercontent.com/ijsucceed/onepress/master/images/screenshot.png)
 
 ## Installation
 
