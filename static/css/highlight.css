@@ -29,7 +29,7 @@
 .method,
 .hljs-list .hljs-title,
 .nginx .hljs-title {
-  color: #ffffb6;
+  color: #24292e;
 }
 
 .hljs-string,
@@ -44,11 +44,11 @@
 }
 
 .hljs-subst {
-  color: #daefa3;
+  color: #d73a49;
 }
 
 .hljs-regexp {
-  color: #e9c062;
+  color: #d73a49;
 }
 
 .hljs-title,
@@ -80,7 +80,7 @@
 
 .css .hljs-rule .hljs-property,
 .css .hljs-id {
-  color: #ffffb6;
+  color: #24292e;
 }
 
 .css .hljs-class {
