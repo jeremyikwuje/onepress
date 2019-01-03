@@ -172,6 +172,14 @@ To implement custom CSS sitewide, change the config.toml parameter customCSS fro
 
 This will render inline CSS in the head of your site and without adding an extra HTTP request.
 
+### Show Author box
+
+If you want to show author box beneath post.
+
+```
+ authorCard = true
+```
+
 ## Contributions
 
 If you'd like to help with the continous improvement of this theme, I encourage you to submit a pull request or create an issue if you find a bug. All help is celebrated.
