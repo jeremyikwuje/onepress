@@ -14,7 +14,7 @@ paginate = 12
 
 [params]
 	author = "Jeremiah Succeed"
-    bio = "Fullstack web developer and Templates designer."
+        bio = "Fullstack web developer and Templates designer."
 	logo = "/images/logo.png"
 	avatar = "/images/logo.png"
 	opengraphImage = "/images/logo.png"
@@ -26,7 +26,7 @@ paginate = 12
 	twitter  = "ijsucceed"
 	github   = "ijsucceed"
 	facebook  = "ijsucceed"
-    linkedin  = "ijsucceed"
+        linkedin  = "ijsucceed"
 
     
     # Widget
