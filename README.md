@@ -36,7 +36,7 @@ $ git clone https://github.com/ijsucceed/onepress.git
 ### Option 2: Create Submodule
 
 Create a submodule linked directly to the theme's GitHub repository in order to receive updates:
-
+ 
 ```
 $ git submodule add https://github.com/ijsucceed/onepress.git themes/onepress
 ```
