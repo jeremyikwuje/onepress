@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-<footer id="footer" class="mobile-only">
+<footer id="footer">
     <p class="small">
-          {{ .Site.Copyright }}
+      {{ .Site.Copyright }}
     </p>
 </footer>
-=======
-<footer id="footer" class="mobile-only">
-    <p class="small">
-      {{ if or (.Site.Params.copyright) (.Site.Params.credit) }}
-      <div class="col-xs-12">
-        {{ if .Site.Params.copyright }}
-          &copy; {{ now.Format "2006" }} {{ .Site.Params.author }}.
-        {{ end }}
-        {{ if .Site.Params.credit }}
-          <a href="https://ijsucceed.com" target="_blank">OnePress theme.</a>
-        {{ end }}
-      </div>
-      {{ end }}
-    </p>
-</footer>
->>>>>>> bc3b59fd459be92483fe0d7e20a8169a3ec1543d

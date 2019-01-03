@@ -1,10 +1,13 @@
 {{ define "main" }}
-<article class="post">
-    <header>
-        <h1>{{ .Site.Params.title404 | default "404 - Page not found" }}</h1>
-        <h3>{{ .Site.Params.subtitle404 | default "The content you're looking for doesn't seem to exist." }}</h3>
-    </header>
+	<h1>Oh! <b>404</b></h1>
+    <p>
+        The requested URL was not found on this server. 
+        <br>
+        <i>That’s all I know.</i>
+    </p>
+    <a href="." style="text-decoration:underline">Am here.</a>
+{{ end }}
 
-    {{ partial "latest-posts.html" . }}
-</article>
+{{ define "widgets" }}
+	{{ partial "widgets.html" . }}
 {{ end }}
