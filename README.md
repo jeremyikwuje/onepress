@@ -69,20 +69,20 @@ paginate = 12
 
 [params]
 	author = "Jeremiah Succeed"
-    bio = "Fullstack web developer and Templates designer."
+        bio = "Fullstack web developer and Templates designer."
 	logo = "/images/onepress-logo.png"
 	avatar = "/images/onepress-author.png"
 	opengraphImage = "/images/onepress-logo.jpg"
 	enableRSS = true
 
 	customCSS = false
-    readMore = "Read Up"
+        readMore = "Read Up"
     
     # Social
 	twitter  = "ijsucceed"
 	github   = "ijsucceed"
 	facebook  = ""
-    linkedin  = "ijsucceed"
+        linkedin  = ""
 
     
     # Widget
