@@ -12,6 +12,7 @@ categories = [
     "Development",
     "golang",
 ]
+featuredImage = "/images/hugo-home.png"
 +++
 
 ## Step 1. Install Hugo
