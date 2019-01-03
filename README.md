@@ -79,8 +79,8 @@ paginate = 12
         readMore = "Read Up"
     
     # Social
-	twitter  = "ijsucceed"
-	github   = "ijsucceed"
+	twitter  = "https://twitter.com/ijsucceed"
+	github   = "https://github.com/ijsucceed"
 	facebook  = ""
         linkedin  = ""
 
