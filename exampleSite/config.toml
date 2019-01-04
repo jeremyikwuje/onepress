@@ -18,6 +18,7 @@ paginate = 12
 	avatar = "images/logo.png"
 	opengraphImage = "images/logo.png"
 	enableRSS = true
+	subscribeLink = "Link to your subscription"
 	customCSS = false
         readMore = "Read Up"
     
