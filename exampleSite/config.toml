@@ -1,13 +1,12 @@
-baseURL = "/"
+baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Onepress Example Site"
 description = "a Blog by Jeremiah Succeed"
-config = "config.toml"
 theme = "onepress"
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = "UA-99057145-6"
+googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
-disqusShortname = "ijsucceed"
+disqusShortname = ""
 copyright = "Copyright © 2019, Jeremiah Succeed; all rights reserved."
 canonifyURLS = true
 paginate = 12
@@ -15,16 +14,16 @@ paginate = 12
 [params]
 	author = "Jeremiah Succeed"
         bio = "Fullstack web developer and Templates designer."
-	logo = "/images/logo.png"
-	avatar = "/images/logo.png"
-	opengraphImage = "/images/logo.png"
+	logo = "images/logo.png"
+	avatar = "images/logo.png"
+	opengraphImage = "images/logo.png"
 	enableRSS = true
 	customCSS = false
-    readMore = "Read Up"
+        readMore = "Read Up"
     
     # Social
-	twitter  = "https://twitter.com/ijsucceed"
-	github   = "https://github.com/ijsucceed"
+	twitter  = "https://twitter.com/username"
+	github   = "https://github.com/username"
 	facebook  = ""
         linkedin  = ""
 
