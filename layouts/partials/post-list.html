@@ -1,6 +1,6 @@
 {{ range where .Paginator.Pages "Section" "ne" "" }}
 <article class="list">
-  <a href='{{ .URL }}'><h2 class="title">{{ .LinkTitle }}</h2></a>
+  <a href='{{ .Permalink }}'><h2 class="title">{{ .LinkTitle }}</h2></a>
   <span class="tags">
   {{ .Date.Format "January 2, 2006" }} 
   {{ if .Params.tags }}
@@ -11,10 +11,10 @@
   {{end}}
   </span>
   {{ if .Params.featuredImage  }}
-  <a href='{{ .URL }}'><span class="image" style="background-image: url({{.Params.featuredimage }})"></span></a>
+  <a href='{{ .Permalink }}'><span class="image" style="background-image: url({{.Params.featuredimage }})"></span></a>
   {{ end }}
   <span class="intro">{{ .Description | markdownify }}</span>
-  <a href='{{ .URL }}' class="read-more">
+  <a href='{{ .Permalink }}' class="read-more">
       {{ if .Site.Params.readMore }} 
           {{.Site.Params.readMore}}
       {{ else }}
