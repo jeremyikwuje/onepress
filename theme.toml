@@ -2,20 +2,15 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Onepress"
-license = "MIT"
+license = "Apache 2.0"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
+description = "A clean, simple and responsive hugo theme for bloggers."
+homepage = "https://github.com/ijsucceed/onepress"
+tags = [ "responsive", "disqus", "widgets", "blog", "fontawesome", "minimal"]
+features = [ "comments", "social icons", "posts", "syntax highlighting"]
 min_version = "0.41"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Jeremiah Succeed"
+  homepage = "https://ijsucceed.com"
 
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
