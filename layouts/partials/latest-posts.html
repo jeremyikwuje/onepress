@@ -5,7 +5,7 @@
     {{ $othr := where $kind "URL" "!=" .URL }}
     {{ range first 10 $othr }}
         <li>
-            <a href="{{ .URL }}">{{ .LinkTitle }}<aside class="dates">{{ .Date.Format "Jan 2 2006" }}</aside></a>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}<aside class="dates">{{ .Date.Format "Jan 2 2006" }}</aside></a>
         </li>
     {{ end }}
 </ul>
