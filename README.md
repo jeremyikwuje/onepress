@@ -172,13 +172,16 @@ To implement custom CSS sitewide, change the config.toml parameter customCSS fro
 
 This will render inline CSS in the head of your site and without adding an extra HTTP request.
 
-### Show Author box
+## Show Author box
 
 If you want to show author box beneath post.
 
 ```
  authorCard = true
 ```
+
+## Subscribe link
+Use the parameter `subscribeLink` to create a link to a page (internal or external) that contains your email subscription form.
 
 ## Contributions
 
