@@ -18,7 +18,7 @@ paginate = 12
 	avatar = "images/logo.png"
 	opengraphImage = "images/logo.png"
 	enableRSS = true
-	subscribeLink = "Link to your subscription"
+	subscribeLink = "https://github.com/ijsucceed/onepress/blob/master/README.md#subscribe-link"
 	customCSS = false
         readMore = "Read Up"
     
