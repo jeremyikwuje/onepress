@@ -1,6 +1,7 @@
 <ul>
-<li class="active"><a href='{{ .Site.BaseURL }}'>Articles</a></li>
-<li><a href='/about'>About</a></li>
-{{ if .Site.Params.subscribeLink }}
-    <li><a href="{{ .Site.Params.subscribeLink }}" target="blank">Subscribe</a></li>
-{{ end }}
+    <li class="active"><a href='{{ .Site.BaseURL }}'>Articles</a></li>
+    <li><a href='/about'>About</a></li>
+    {{ if .Site.Params.subscribeLink }}
+        <li><a href="{{ .Site.Params.subscribeLink }}" target="blank">Subscribe</a></li>
+    {{ end }}
+</ul>
