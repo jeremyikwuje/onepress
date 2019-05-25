@@ -5,10 +5,10 @@
     </div>
     <div class="author-bio">
         <h4 class="author-title">
-         About <span itemprop="name"></span>
+         About <span itemprop="name">{{ .Site.Params.author }}</span>
         </h4>
         <div class="author-description" itemprop="description">
-        I'm a web developer, templates designer, and Minimalist.
+        {{ .Site.Params.bio }}
         </div>
     </div>
 </div>
